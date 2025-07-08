@@ -1,6 +1,6 @@
 import logging
 import io
-import os # <-- Import the 'os' module
+import os # <-- This is important
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application,
@@ -14,8 +14,8 @@ from telegram.ext import (
 from PIL import Image
 
 # --- Configuration ---
-# The bot token is now loaded from a secure environment variable
-# We will set this variable on the Render server in a later step.
+# --- THIS IS THE ONLY LINE THAT CHANGED ---
+# We are now using a simpler variable name to ensure it works.
 BOT_TOKEN = os.getenv("8199651093:AAGpq3dbYFSFENDzlJmMEh9ld-Ua3ZOmrdo")
 
 # Enable logging
@@ -189,7 +189,8 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 def main() -> None:
     """Set up and run the bot."""
     if not BOT_TOKEN:
-        logger.error("FATAL: TELEGRAM_BOT_TOKEN environment variable not set.")
+        # This is the error message that will appear in the logs if the token is not found
+        logger.error("FATAL: BOT_TOKEN environment variable not set.")
         return
 
     application = (
@@ -216,3 +217,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

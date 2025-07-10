@@ -189,7 +189,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
 def main() -> None:
     # --- THIS IS THE NEW DEBUGGING CODE ---
-    print('--- START OF ENVIRONMENT VARIABLES ---")
+    print("--- START OF ENVIRONMENT VARIABLES ---")
     print(json.dumps(dict(os.environ),indent=2))
     print("--- END OF ENVIRONMENT VARIABLES ---")
     """Set up and run the bot."""

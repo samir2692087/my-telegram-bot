@@ -1,3 +1,4 @@
+import json
 import logging
 import io
 import os # <-- This is important
@@ -187,6 +188,10 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     return ConversationHandler.END
 
 def main() -> None:
+    # --- THIS IS THE NEW DEBUGGING CODE ---
+    print('--- START OF ENVIRONMENT VARIABLES ---")
+    print(json.dumps(dict(os.environ),indent=2))
+    print("--- END OF ENVIRONMENT VARIABLES ---")
     """Set up and run the bot."""
     if not BOT_TOKEN:
         # This is the error message that will appear in the logs if the token is not found

@@ -17,7 +17,7 @@ from PIL import Image
 # --- Configuration ---
 # --- THIS IS THE ONLY LINE THAT CHANGED ---
 # We are now using a simpler variable name to ensure it works.
-BOT_TOKEN = os.getenv("8199651093:AAGpq3dbYFSFENDzlJmMEh9ld-Ua3ZOmrdo")
+BOT_TOKEN = os.getenv("8199651093:AAGoi5cBm8d6Bet29TMlXkCGgyJ_X3hoImY")
 
 # Enable logging
 logging.basicConfig(
